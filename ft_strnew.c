@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_strnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nben-yaa <nben-yaa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/06/25 10:46:53 by nben-yaa          #+#    #+#             */
-/*   Updated: 2018/06/29 22:31:08 by nben-yaa         ###   ########.fr       */
+/*   Created: 2018/06/26 16:44:30 by nben-yaa          #+#    #+#             */
+/*   Updated: 2018/06/27 23:52:41 by nben-yaa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_bzero(void *s, size_t n)
+char	*ft_strnew(size_t size)
 {
-	ft_memset(s, 0, n);
+	return ((char *)ft_memalloc((size + 1) * sizeof(char)));
 }

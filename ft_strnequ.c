@@ -1,18 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_strnequ.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nben-yaa <nben-yaa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/06/25 10:46:53 by nben-yaa          #+#    #+#             */
-/*   Updated: 2018/06/29 22:31:08 by nben-yaa         ###   ########.fr       */
+/*   Created: 2018/06/26 17:37:25 by nben-yaa          #+#    #+#             */
+/*   Updated: 2018/06/28 01:37:02 by nben-yaa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_bzero(void *s, size_t n)
+int	ft_strnequ(const char *s1, const char *s2, size_t n)
 {
-	ft_memset(s, 0, n);
+	if (s1 == 0 || s2 == 0)
+		return (0);
+	if (ft_strncmp(s1, s2, n) == 0)
+		return (1);
+	else
+		return (0);
 }

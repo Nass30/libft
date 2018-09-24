@@ -1,18 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nben-yaa <nben-yaa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/06/25 10:46:53 by nben-yaa          #+#    #+#             */
-/*   Updated: 2018/06/29 22:31:08 by nben-yaa         ###   ########.fr       */
+/*   Created: 2018/06/26 17:51:06 by nben-yaa          #+#    #+#             */
+/*   Updated: 2018/06/26 18:12:34 by nben-yaa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_bzero(void *s, size_t n)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	ft_memset(s, 0, n);
+	char	*res;
+
+	if (s1 == 0 || s2 == 0)
+		return (NULL);
+	if ((res = ft_strnew(ft_strlen(s1) + ft_strlen(s2) + 1)) == 0)
+		return (NULL);
+	ft_strcat(res, s1);
+	ft_strcat(res, s2);
+	return (res);
 }

@@ -1,18 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_sqrt.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nben-yaa <nben-yaa@student.42.fr>          +#+  +:+       +#+        */
+/*   By: nben-yaa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/06/25 10:46:53 by nben-yaa          #+#    #+#             */
-/*   Updated: 2018/06/29 22:31:08 by nben-yaa         ###   ########.fr       */
+/*   Created: 2018/04/25 15:22:38 by nben-yaa          #+#    #+#             */
+/*   Updated: 2018/05/08 18:09:20 by nben-yaa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-void	ft_bzero(void *s, size_t n)
+int	ft_sqrt(int nb)
 {
-	ft_memset(s, 0, n);
+	int	i;
+
+	i = 1;
+	while (i <= nb / 2)
+	{
+		if (i * i == nb)
+			return (i);
+		i++;
+	}
+	return (0);
 }

@@ -6,11 +6,11 @@
 #    By: nben-yaa <nben-yaa@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/06/25 16:16:45 by nben-yaa          #+#    #+#              #
-#    Updated: 2018/06/28 01:48:13 by nben-yaa         ###   ########.fr        #
+#    Updated: 2018/06/29 22:26:40 by nben-yaa         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS_DIR	=	./srcs
+SRCS_DIR	=	.
 SRCS		=	$(SRCS_DIR)/ft_memset.c \
 				$(SRCS_DIR)/ft_bzero.c \
 				$(SRCS_DIR)/ft_memcpy.c \
@@ -62,9 +62,16 @@ SRCS		=	$(SRCS_DIR)/ft_memset.c \
 				$(SRCS_DIR)/ft_putstr_fd.c \
 				$(SRCS_DIR)/ft_putendl_fd.c \
 				$(SRCS_DIR)/ft_putnbr_fd.c \
-				$(SRCS_DIR)/ft_strncpy.c
+				$(SRCS_DIR)/ft_strncpy.c \
+				$(SRCS_DIR)/ft_lstnew.c \
+				$(SRCS_DIR)/ft_lstdelone.c \
+				$(SRCS_DIR)/ft_lstdel.c \
+				$(SRCS_DIR)/ft_lstadd.c \
+				$(SRCS_DIR)/ft_lstiter.c \
+				$(SRCS_DIR)/ft_lstmap.c \
+				$(SRCS_DIR)/ft_sqrt.c
 
-CFLAGS		=	-W -Wall -Werror -Wextra -I./includes
+CFLAGS		=	-Wall -Werror -Wextra
 
 OBJ			=	$(SRCS:.c=.o)
 

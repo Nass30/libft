@@ -6,11 +6,11 @@
 /*   By: nben-yaa <nben-yaa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/06/25 09:46:54 by supasaitama       #+#    #+#             */
-/*   Updated: 2018/06/25 11:01:18 by nben-yaa         ###   ########.fr       */
+/*   Updated: 2018/06/25 18:03:52 by nben-yaa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
 size_t	ft_strlen(const char *s)
 {

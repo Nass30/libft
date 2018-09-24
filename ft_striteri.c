@@ -1,18 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nben-yaa <nben-yaa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/06/25 10:46:53 by nben-yaa          #+#    #+#             */
-/*   Updated: 2018/06/29 22:31:08 by nben-yaa         ###   ########.fr       */
+/*   Created: 2018/06/26 16:52:51 by nben-yaa          #+#    #+#             */
+/*   Updated: 2018/06/26 17:14:55 by nben-yaa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_bzero(void *s, size_t n)
+void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
-	ft_memset(s, 0, n);
+	size_t	i;
+
+	if (s == NULL || f == NULL)
+		return ;
+	i = 0;
+	while (s[i] != 0)
+	{
+		f(i, s + i);
+		i++;
+	}
 }
